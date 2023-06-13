@@ -16,9 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-client</artifactId>
-            <version>5.18.1</version>
+            <groupId>org.glassfish.mq</groupId>
+            <artifactId>imq</artifactId>
+            <version>5.1</version>
         </dependency>
     </dependencies>
 
