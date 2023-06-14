@@ -9,7 +9,7 @@ public class JMSSubscriber implements MessageListener {
         JMSContext context = connectionFactory.createContext();
         Topic topic = context.createTopic(Common.TOPIC_NAME);
 
-        JMSConsumer consumer = context.createConsumer(topic);
+        JMSConsumer consumer = context.createSharedConsumer(topic, "sub:3d");
         consumer.setMessageListener(this);
         System.out.println("Ready to receive message.");
     }
