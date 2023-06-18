@@ -14,6 +14,7 @@ public class JMSSender {
             Queue queue = jmsContext.createQueue(Common.QUEUE_NAME);
             jmsContext
                     .createProducer()
+                    .setDeliveryDelay(5000L) //Using this we can send message to broker and ask broker to wait for this interval before sending the message.
                     .setProperty("trader_name", "Mark")
                     .setDeliveryMode(DeliveryMode.NON_PERSISTENT)
                     .send(queue, "BUY AAPL 1500 SHARES");
